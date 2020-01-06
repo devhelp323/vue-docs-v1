@@ -4,7 +4,7 @@ heroImage: /logo.png
 heroText: Vue.js
 tagline: The Progressive JavaScript Framework
 actionText: Get Started →
-actionLink: /guide/introduction
+actionLink: /docs/
 features:
 - title: Approachable
   details: Already know HTML, CSS and JavaScript? Read the guide and start building things in no time!
