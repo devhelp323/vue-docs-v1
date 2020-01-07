@@ -44,16 +44,12 @@ const vm = Vue.createApp().mount({
 
 // Getting the property on the instance
 // returns the one from the original data
-vm.a == data.a; // => true
+vm.a === data.a; // => true
 
 // Setting the property on the instance
 // also affects the original data
 vm.a = 2;
 data.a; // => 2
-
-// ... and vice-versa
-data.a = 3;
-vm.a; // => 3
 ```
 
 When this data changes, the view will re-render. It should be noted that properties in `data` are only **reactive** if they existed when the instance was created. That means if you add a new property, like:
