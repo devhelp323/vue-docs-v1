@@ -13,32 +13,30 @@ module.exports = {
         ]
       },
       { text: 'API Reference', link: '/api/' },
-      { text: 'Examples',
+      {
+        text: 'Examples',
         ariaLabel: 'Examples Menu',
         items: [
           { text: 'Examples', link: '/examples/' },
-          { text: 'Cookbook', link: '/cookbook/' },
+          { text: 'Cookbook', link: '/cookbook/' }
         ]
       },
       { text: 'Community', link: '/community/' }
     ],
     sidebarDepth: 2,
     sidebar: {
-      '/guide/': [
-        'installation',
-        'introduction'
-      ]
-    },
+      '/guide/': ['installation', 'introduction', 'instance', 'template-syntax']
+    }
   },
   plugins: {
     '@vuepress/pwa': {
       serviceWorker: true,
       updatePopup: {
         '/': {
-          message: "New content is available.",
-          buttonText: "Refresh"
-        },
-      },
-    },
-  },
-}
+          message: 'New content is available.',
+          buttonText: 'Refresh'
+        }
+      }
+    }
+  }
+};
