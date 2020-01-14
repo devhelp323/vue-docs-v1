@@ -25,23 +25,7 @@ module.exports = {
     ],
     sidebarDepth: 2,
     sidebar: {
-      '/guide/': [
-        {
-          title: 'Essentials',
-          collapsable: true,
-          children: [
-            'installation',
-            'introduction',
-            'instance',
-            'template-syntax',
-            // 'computed',
-            // 'class-and-style',
-            // 'conditional',
-            // 'list'
-            'events'
-          ]
-        }
-      ]
+      '/guide/': ['installation', 'introduction', 'instance', 'template-syntax']
     }
   },
   plugins: {
@@ -55,4 +39,4 @@ module.exports = {
       }
     }
   }
-}
+};
