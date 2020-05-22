@@ -46,17 +46,14 @@ const sidebar = {
         '/guide/mixins',
         '/guide/custom-directive',
         '/guide/render-function',
-        '/guide/plugins'
+        '/guide/plugins',
+        '/guide/composition-api-introduction'
       ]
     },
     {
       title: 'Scaling Up',
       collapsable: false,
-      children: [
-        '/guide/routing',
-        '/guide/state-management',
-        '/guide/ssr'
-      ]
+      children: ['/guide/routing', '/guide/state-management', '/guide/ssr']
     },
     {
       title: 'Migration to Vue 3',
@@ -148,9 +145,6 @@ module.exports = {
         ]
       }
     ],
-    repo: 'vuejs/docs-next',
-    editLinks: true,
-    editLinkText: 'Edit this on GitHub!',
     sidebarDepth: 2,
     sidebar: {
       collapsable: false,
