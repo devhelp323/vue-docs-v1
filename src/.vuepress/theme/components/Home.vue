@@ -143,10 +143,6 @@ export default {
 <style lang="scss">
 @import '@theme/styles/_settings.scss';
 
-.home {
-  font-family: $fontHome;
-}
-
 .hero {
   padding: calc(100px + 3rem) 40px 30px; // add $betaBannerHeight
 
