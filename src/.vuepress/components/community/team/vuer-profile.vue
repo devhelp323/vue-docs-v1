@@ -241,7 +241,7 @@ export default {
 
   &::after {
     content: '\f06a';
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 5 Free';
     font-size: 0.75em;
     vertical-align: super;
     margin-left: 4px;
