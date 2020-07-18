@@ -1,6 +1,12 @@
+<script>
+export default {}
+</script>
+
 <template>
   <aside class="beta-banner">
-    <p>⚠️ Beta Version: Docs are in development and subject to change.</p>
+    <p>
+      ⚠️ Beta Version: Docs are in development and subject to change.
+    </p>
   </aside>
 </template>
 
@@ -9,7 +15,7 @@
 
 .beta-banner {
   position: fixed;
-  z-index: 21;
+  z-index: 20;
   top: 0;
   left: 0;
   right: 0;
