@@ -234,7 +234,6 @@ module.exports = {
     repo: 'vuejs/docs-next',
     editLinks: false,
     editLinkText: 'Edit this on GitHub!',
-    lastUpdated: 'Last updated',
     docsDir: 'src',
     sidebarDepth: 2,
     sidebar: {
