@@ -14,7 +14,7 @@
 
 - **Usage:**
 
-  Watch a reactive property or a computed function on the Vue instance for changes. The callback gets called with the new value and the old value for the given property. We can only pass top-level `data`, `prop`, or `computed` property name as a string. For more complex expressions or nested properties, use a function instead.
+  Watch an expression or a computed function on the Vue instance for changes. The callback gets called with the new value and the old value. The expression only accepts dot-delimited paths. For more complex expressions, use a function instead.
 
 - **Example:**
 
@@ -23,28 +23,16 @@
     data() {
       return {
         a: 1,
-        b: 2,
-        c: {
-          d: 3,
-          e: 4
-        }
+        b: 2
       }
     },
     created() {
-      // top-level property name
+      // keypath
       this.$watch('a', (newVal, oldVal) => {
         // do something
       })
 
-      // function for watching a single nested property
-      this.$watch(
-        () => this.c.d,
-        (newVal, oldVal) => {
-          // do something
-        }
-      )
-
-      // function for watching a complex expression
+      // function
       this.$watch(
         // every time the expression `this.a + this.b` yields a different result,
         // the handler will be called. It's as if we were watching a computed
