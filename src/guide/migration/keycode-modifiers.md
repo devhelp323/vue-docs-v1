@@ -1,9 +1,4 @@
----
-badges:
-  - breaking
----
-
-# KeyCode Modifiers <MigrationBadges :badges="$frontmatter.badges" />
+# KeyCode Modifiers
 
 ## Overview
 

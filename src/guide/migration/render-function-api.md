@@ -1,9 +1,4 @@
----
-badges:
-  - breaking
----
-
-# Render Function API <MigrationBadges :badges="$frontmatter.badges" />
+# Render Function API
 
 ## Overview
 

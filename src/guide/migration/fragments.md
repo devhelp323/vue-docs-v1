@@ -1,9 +1,4 @@
----
-badges:
-  - new
----
-
-# Fragments <MigrationBadges :badges="$frontmatter.badges" />
+# Fragments
 
 ## Overview
 

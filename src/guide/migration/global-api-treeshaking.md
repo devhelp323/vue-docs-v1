@@ -1,9 +1,4 @@
----
-badges:
-  - breaking
----
-
-# Global API Treeshaking <MigrationBadges :badges="$frontmatter.badges" />
+# Global API Treeshaking
 
 ## 2.x Syntax
 
@@ -101,7 +96,11 @@ is compiled into something similar to the following:
 import { h, Transition, withDirectives, vShow } from 'vue'
 
 export function render() {
-  return h(Transition, [withDirectives(h('div', 'hello'), [[vShow, this.ok]])])
+  return h(Transition, [
+    withDirectives(h('div', 'hello'), [
+      [vShow, this.ok]
+    ])
+  ])
 }
 ```
 

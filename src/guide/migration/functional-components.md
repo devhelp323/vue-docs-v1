@@ -1,9 +1,4 @@
----
-badges:
-  - breaking
----
-
-# Functional Components <MigrationBadges :badges="$frontmatter.badges" />
+# Functional Components
 
 ## Overview
 
@@ -11,8 +6,8 @@ In terms of what has changed, at a high level:
 
 - Performance gains from 2.x for functional components are now negligible in 3.x, so we recommend just using stateful components
 - Functional components can only be created using a plain function that receives `props` and `context` (i.e., `slots`, `attrs`, `emit`)
-- **BREAKING:** `functional` attribute on single-file component (SFC) `<template>` is removed
-- **BREAKING:** `{ functional: true }` option in components created by functions is removed
+- **DEPRECATED:** `functional` attribute on single-file component (SFC) `<template>` is deprecated
+- **DEPRECATED:** `{ functional: true }` option in components created by functions is deprecated
 
 For more information, read on!
 
