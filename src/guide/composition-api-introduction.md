@@ -35,7 +35,7 @@ export default {
   methods: {
     getUserRepositories () {
       // using `this.user` to fetch user repositories
-    }, // 1
+    }, // 2
     updateFilters () { ... }, // 3
   },
   mounted () {
