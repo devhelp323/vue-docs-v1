@@ -299,16 +299,6 @@ const members = [
       twitter: 'KiaKing85',
       reposOfficial: ['vuex'],
       reposPersonal: ['vuex-orm/*']
-    },
-    {
-      name: 'Anthony Fu',
-      city: 'Taipei, Taiwan',
-      languages: ['zh', 'en'],
-      github: 'antfu',
-      twitter: 'antfu7',
-      reposOfficial: ['composition-api'],
-      reposPersonal: ['vueuse', 'vue-demi', 'vue-reactivity/*'],
-      links: ['https://antfu.me/']
     }
   ])
 )
