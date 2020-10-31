@@ -1,10 +1,5 @@
 <script>
-const validBadges = {
-  new: 'new',
-  breaking: 'breaking',
-  removed: 'removed',
-  updated: 'updated'
-}
+const validBadges = ['new', 'breaking', 'removed', 'updated']
 
 export default {
   props: {
@@ -12,13 +7,8 @@ export default {
       type: Array,
       default: () => [],
       validator(value) {
-        return value.every(badge => Object.keys(validBadges).includes(badge))
+        return value.every(badge => validBadges.includes(badge))
       }
-    }
-  },
-  data() {
-    return {
-      validBadges
     }
   }
 }
@@ -31,7 +21,7 @@ export default {
       :class="`migration-badge is-${badgeType}`"
       :key="`badge-type-${badgeType}`"
     >
-      {{ validBadges[badgeType] }}
+      {{ badgeType }}
     </span>
   </div>
 </template>
