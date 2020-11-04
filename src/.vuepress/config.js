@@ -344,7 +344,7 @@ module.exports = {
               },
               {
                 text: 'Vuex',
-                link: 'https://next.vuex.vuejs.org/'
+                link: 'https://vuex.vuejs.org/'
               },
               {
                 text: 'Vue CLI',
