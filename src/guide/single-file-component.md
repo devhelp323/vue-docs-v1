@@ -102,7 +102,7 @@ export default {
   // this is an array of outputed formats
   output: [ 
     {
-      file: pkg.module, // the name of our esm library
+      file: pkg.module, // the name of our esm librry
       format: 'esm', // the format of choice
       sourcemap: true, // ask rollup to include sourcemaps
     }

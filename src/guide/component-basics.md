@@ -178,11 +178,7 @@ Which can be used in the template to control the font size of all blog posts:
 ```html
 <div id="blog-posts-events-demo">
   <div :style="{ fontSize: postFontSize + 'em' }">
-    <blog-post
-      v-for="post in posts"
-      :key="post.id"
-      :title="post.title"
-    ></blog-post>
+    <blog-post v-for="post in posts" :key="post.id" :title="post.title"></blog-post>
   </div>
 </div>
 ```
@@ -220,7 +216,7 @@ When we click on the button, we need to communicate to the parent that it should
 Then the child component can emit an event on itself by calling the built-in [**`$emit`** method](../api/instance-methods.html#emit), passing the name of the event:
 
 ```html
-<button @click="$emit('enlargeText')">
+<button @click="$emit('enlarge-text')">
   Enlarge text
 </button>
 ```
@@ -234,7 +230,7 @@ We can list emitted events in the component's `emits` option:
 ```js
 app.component('blog-post', {
   props: ['title'],
-  emits: ['enlargeText']
+  emits: ['enlarge-text']
 })
 ```
 
@@ -245,7 +241,7 @@ This will allow you to check all the events that a component emits and optionall
 It's sometimes useful to emit a specific value with an event. For example, we may want the `<blog-post>` component to be in charge of how much to enlarge the text by. In those cases, we can pass a second parameter to `$emit` to provide this value:
 
 ```html
-<button @click="$emit('enlargeText', 0.1)">
+<button @click="$emit('enlarge-text', 0.1)">
   Enlarge text
 </button>
 ```
