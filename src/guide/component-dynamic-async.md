@@ -38,11 +38,9 @@ Check out more details on `<keep-alive>` in the [API reference](../api/built-in-
 In large applications, we may need to divide the app into smaller chunks and only load a component from the server when it's needed. To make that possible, Vue has a `defineAsyncComponent` method:
 
 ```js
-const { createApp, defineAsyncComponent } = Vue
+const app = Vue.createApp({})
 
-const app = createApp({})
-
-const AsyncComp = defineAsyncComponent(
+const AsyncComp = Vue.defineAsyncComponent(
   () =>
     new Promise((resolve, reject) => {
       resolve({

@@ -13,19 +13,17 @@ If you're coming from React, you may be wondering how vuex compares to [redux](h
 It is often overlooked that the source of truth in Vue applications is the reactive `data` object - a component instance only proxies access to it. Therefore, if you have a piece of state that should be shared by multiple instances, you can use a [reactive](/guide/reactivity-fundamentals.html#declaring-reactive-state) method to make an object reactive:
 
 ```js
-const { createApp, reactive } = Vue
-
-const sourceOfTruth = reactive({
+const sourceOfTruth = Vue.reactive({
   message: 'Hello'
 })
 
-const appA = createApp({
+const appA = Vue.createApp({
   data() {
     return sourceOfTruth
   }
 }).mount('#app-a')
 
-const appB = createApp({
+const appB = Vue.createApp({
   data() {
     return sourceOfTruth
   }
@@ -41,7 +39,7 @@ const appB = createApp({
 Now whenever `sourceOfTruth` is mutated, both `appA` and `appB` will update their views automatically. We have a single source of truth now, but debugging would be a nightmare. Any piece of data could be changed by any part of our app at any time, without leaving a trace.
 
 ```js
-const appB = createApp({
+const appB = Vue.createApp({
   data() {
     return sourceOfTruth
   },
@@ -57,7 +55,7 @@ To help solve this problem, we can adopt a **store pattern**:
 const store = {
   debug: true,
 
-  state: reactive({
+  state: Vue.reactive({
     message: 'Hello!'
   }),
 
@@ -90,7 +88,7 @@ In addition, each instance/component can still own and manage its own private st
 ```
 
 ```js
-const appA = createApp({
+const appA = Vue.createApp({
   data() {
     return {
       privateState: {},
@@ -102,7 +100,7 @@ const appA = createApp({
   }
 }).mount('#app-a')
 
-const appB = createApp({
+const appB = Vue.createApp({
   data() {
     return {
       privateState: {},
