@@ -22,25 +22,7 @@
 </template>
 
 <script>
-import Vue from 'vue'
 import { isExternal, isMailto, isTel, ensureExt } from '../util'
-
-const pageLocation = Vue.observable({ path: '/' })
-
-let initPath = () => {
-  initPath = () => {}
-
-  const updatePath = () => {
-    pageLocation.path = location.pathname
-  }
-
-  updatePath()
-
-  // There is no event for detecting navigation but these cover most cases
-  for (const event of ['focusin', 'scroll', 'mouseover', 'keydown']) {
-    window.addEventListener(event, updatePath)
-  }
-}
 
 export default {
   name: 'NavLink',
@@ -53,13 +35,7 @@ export default {
 
   computed: {
     link () {
-      let link = ensureExt(this.item.link)
-
-      if (this.item.isTranslation) {
-        link = link.replace(/\/$/, '') + pageLocation.path
-      }
-
-      return link
+      return ensureExt(this.item.link)
     },
 
     exact () {
@@ -92,7 +68,7 @@ export default {
     },
 
     rel () {
-      if (this.isNonHttpURI || this.item.isTranslation) {
+      if (this.isNonHttpURI) {
         return null
       }
       if (this.item.rel) {
@@ -106,10 +82,6 @@ export default {
     focusoutAction () {
       this.$emit('focusout')
     }
-  },
-
-  mounted () {
-    initPath()
   }
 }
 </script>

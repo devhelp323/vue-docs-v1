@@ -423,28 +423,23 @@ module.exports = {
           // Translation maintainers: Please include the link below to the English documentation
           // {
           //   text: 'English',
-          //   link: 'https://v3.vuejs.org/',
-          //   isTranslation: true
+          //   link: 'https://v3.vuejs.org/'
           // },
           {
             text: '中文',
-            link: 'https://v3.cn.vuejs.org/',
-            isTranslation: true
+            link: 'https://v3.cn.vuejs.org/'
           },
           {
             text: '한국어',
-            link: 'https://v3.ko.vuejs.org/',
-            isTranslation: true
+            link: 'https://v3.ko.vuejs.org/'
           },
           {
             text: '日本語',
-            link: 'https://v3.ja.vuejs.org/',
-            isTranslation: true
+            link: 'https://v3.ja.vuejs.org/'
           },
           {
             text: 'Русский',
-            link: 'https://v3.ru.vuejs.org/ru/',
-            isTranslation: true
+            link: 'https://v3.ru.vuejs.org/'
           },
           {
             text: 'More Translations',
@@ -453,7 +448,7 @@ module.exports = {
         ]
       }
     ],
-    repo: 'vuejs/docs',
+    repo: 'vuejs/docs-next',
     editLinks: false,
     editLinkText: 'Edit this on GitHub!',
     lastUpdated: 'Last updated',

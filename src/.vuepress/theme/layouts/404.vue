@@ -3,13 +3,7 @@
     <div class="theme-default-content">
       <h1>404</h1>
 
-      <blockquote>
-        <p>Whoops! This page doesn't exist.</p>
-      </blockquote>
-
-      <p v-show="isTranslation">
-        New pages are added to the documentation all the time. This page might not be included in all of the translations yet.
-      </p>
+      <blockquote>{{ getMsg() }}</blockquote>
 
       <RouterLink to="/">
         Take me home.
@@ -19,22 +13,17 @@
 </template>
 
 <script>
-import { repos } from '../../components/guide/contributing/translations-data.js'
+const msgs = [
+  `There's nothing here.`,
+  `How did we get here?`,
+  `That's a Four-Oh-Four.`,
+  `Looks like we've got some broken links.`
+]
 
 export default {
-  data () {
-    return {
-      isTranslation: false
-    }
-  },
-
-  mounted () {
-    const toOrigin = url => (String(url).match(/https?:\/\/[^/]+/) || [])[0]
-    const referrer = toOrigin(document.referrer)
-
-    // Did we get here from a translation?
-    if (referrer && referrer !== location.origin && repos.some(({ url }) => toOrigin(url) === referrer)) {
-      this.isTranslation = true
+  methods: {
+    getMsg () {
+      return msgs[Math.floor(Math.random() * msgs.length)]
     }
   }
 }

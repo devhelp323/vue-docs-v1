@@ -63,8 +63,6 @@ const app = createApp(
 </div>
 ```
 
-The root props are raw props, much like those passed to [`h`](#h) to create a VNode. In addition to component props, they can also include attributes and event listeners to be applied to the root component.
-
 ### Typing
 
 ```ts
